@@ -1,6 +1,7 @@
 import main from '../assets/images/main.svg'
 import Wrapper from '../assets/wrappers/LandingPage'
 import {Logo} from '../components'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
@@ -19,9 +20,9 @@ const Landing = () => {
         DIY biodiesel. Twee blog flannel everyday carry fingerstache 
         lomo roof party hot chicken hammock.
         </p>
-        <button className="btn btn-hero">
+        <Link to='/register' className="btn btn-hero">
           Login/Register
-        </button>
+        </Link>
       </div>
       <img src={main} alt="job hunt" className="img main-img" />
     </div>
