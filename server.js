@@ -4,11 +4,11 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 //db and authenticateUser
-
 import connectDB from './db/connect.js'
 
 //routers
 import authRouter from './routes/authRoutes.js'
+import jobsRoutes from './routes/jobsRoutes.js'
 
 //middleware
 import notFoundMiddleware from './middleware/not-found.js'
@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/jobs', jobsRoutes)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
